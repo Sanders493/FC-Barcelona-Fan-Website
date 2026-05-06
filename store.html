@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barca Store — Kits</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="img/icon.png" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <!-- reuse same inline SVG logo -->
+      <a href="index.html" aria-label="Go to home page">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#8b2350"/><stop offset="1" stop-color="#2c4a9b"/></linearGradient></defs>
+        <circle cx="32" cy="32" r="30" fill="url(#g2)"/>
+        <text x="32" y="37" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="18" fill="#ffd971">BARCA</text>
+      </svg>
+      </a>
+      <span class="brand">BARCA Store</span>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#kits">Kits</a>
+      <div class="dropdown">
+        <div class="drop-btn">More ▾</div>
+        <div class="drop-menu">
+          <a href="#kits">Kits</a>
+          <a href="404.html">Accessories</a>
+        </div>
+      </div>
+    </nav>
+    <button class="mobile-toggle" id="mToggle">☰</button>
+  </header>
+
+  <div class="mobile-nav" id="mNav" style="display:none">
+    <a href="index.html">Home</a><a href="#kits">Kits</a><a href="#accessories">Accessories</a>
+  </div>
+
+  <main style="padding:18px;">
+    <section class="section" id="kits" aria-labelledby="kits-h">
+      <h1 class="h2" id="kits-h">Welcome to BARCA official Store — KITS</h1>
+      <p style="text-align:center; color:var(--muted); margin-bottom:18px">Limited editions, player shirts and junior sizes. Prices are examples.</p>
+
+      <!-- animated gif placeholder -->
+      <div style="text-align:center;margin-bottom:20px">
+        <!-- Replace 'logo-anim.gif' with your own animated gif file -->
+        <img src="img/logo-anim.gif" alt="Animated club logo" style="width:160px;margin:0 auto; display:block" />
+      </div>
+
+      <div class="store-grid" aria-live="polite">
+        <!-- product cards: replace src and text -->
+        <div class="card">
+          <div>
+            <img src="img/kit1.webp" alt="Limited edition kit">
+            <h3 style="color:var(--muted); font-weight:700">Limited Edition Shirt — Player's</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$399.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <img src="img/kit2.webp" alt="Away jersey">
+            <h3 style="color:var(--muted); font-weight:700">UCL Away Jersey</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$164.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <img src="img/kit3.webp" alt="Home jersey">
+            <h3 style="color:var(--muted); font-weight:700">Home Jersey 25/26</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$199.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <!-- more cards -->
+        <div class="card">
+          <div>
+            <img src="img/kit4.webp" alt="Men's home">
+            <h3 style="color:var(--muted); font-weight:700">Men's Home Jersey</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$114.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <img src="img/kit5.webp" alt="Junior kit">
+            <h3 style="color:var(--muted); font-weight:700">Junior Home Jersey</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$94.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <img src="img/kit6.webp" alt="Pre-match shirt">
+            <h3 style="color:var(--muted); font-weight:700">Pre-Match Shirt</h3>
+            <div style="color:var(--muted); font-size:14px; margin-top:6px">$64.99</div>
+          </div>
+          <div>
+            <button class="add-btn">Add to cart</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex; gap:12px; align-items:center">
+        <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#8b2350"/></svg>
+        <div><strong>BARCA Store</strong><div style="color:var(--muted)">© Official fan site</div></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile toggle for store page
+    const mT = document.getElementById('mToggle');
+    const mNav = document.getElementById('mNav');
+    mT.addEventListener('click', () => {
+      const open = mNav.style.display === 'block';
+      mNav.style.display = open ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

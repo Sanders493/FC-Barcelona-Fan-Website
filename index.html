@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FC Fan Site — Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="img/icon.png" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="logo" aria-hidden="false">
+      <!-- Inline SVG logo (scalable) -->
+      <a href="index.html" aria-label="Go to home page">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="FC Logo">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#8b2350"/>
+            <stop offset="1" stop-color="#2c4a9b"/>
+          </linearGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#g)"/>
+        <text x="32" y="37" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="18" fill="#ffd971">BARCA</text>
+      </svg>
+      </a>
+      <span class="brand">FC BARCELONA — Fan Page</span>
+    </div>
+
+    <nav class="nav" role="navigation" aria-label="Main">
+      <div class="dropdown">
+        <div class="drop-btn">Videos ▾</div>
+        <div class="drop-menu" role="menu">
+          <a href="404.html">Latest</a>
+          <a href="404.html">Highlights</a>
+        </div>
+      </div>
+
+      <a href="404.html">Players</a>
+      <a href="404.html">Matches</a>
+      <a href="store.html">Merch</a>
+    </nav>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileNav">☰</button>
+  </header>
+
+  <!-- mobile nav (hidden on desktop) -->
+  <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile">
+    <a href="#videos">Videos</a>
+    <a href="#players">Players</a>
+    <a href="#matches">Matches</a>
+    <a href="store.html">Merch</a>
+  </div>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" role="main" aria-labelledby="hero-title">
+      <div class="hero-img" style="background-image:url('img/hero.jpg')">
+        <div class="overlay">
+          <h1 id="hero-title">Raphinha keeps shining with the team</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trophy hall -->
+    <section class="section" id="trophy" aria-labelledby="trophy-h">
+      <h2 class="h2" id="trophy-h">Trophy Hall</h2>
+      <div class="trophy-grid">
+        <div class="trophy">
+          <img src="img/trophy1.jpg" alt="La Liga trophy">
+          <div><strong>La Liga</strong></div>
+          <div style="color:var(--gold);font-weight:700;font-size:20px">28</div>
+        </div>
+        <div class="trophy">
+          <img src="img/trophy2.jpg" alt="UEFA trophy">
+          <div><strong>UEFA Champions League</strong></div>
+          <div style="color:var(--gold);font-weight:700;font-size:20px">5</div>
+        </div>
+        <div class="trophy">
+          <img src="img/trophy3.webp" alt="FIFA club world cup">
+          <div><strong>FIFA Club World Cup</strong></div>
+          <div style="color:var(--gold);font-weight:700;font-size:20px">3</div>
+        </div>
+        <div class="trophy">
+          <img src="img/trophy4.jpg" alt="Copa del Rey">
+          <div><strong>Copa del Rey</strong></div>
+          <div style="color:var(--gold);font-weight:700;font-size:20px">32</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section" aria-labelledby="partners-h">
+      <h2 class="h2" id="partners-h">Main Partners</h2>
+      <div class="partners">
+        <img src="img/nike.png" alt="Nike" style="height:44px"/>
+        <img src="img/spotify.png" alt="Spotify" style="height:44px"/>
+        <img src="img/philips.png" alt="Philips Ambilight" style="height:44px"/>
+      </div>
+    </section>
+
+    <!-- small CTA row linking to store -->
+    <section class="section" style="text-align:center;">
+      <h2 class="h2">Get Official Merch</h2>
+      <p style="color:var(--muted); margin-bottom:12px">Browse limited edition kits and official apparel in our store.</p>
+      <a class="add-btn" href="store.html">Visit Store</a>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex;align-items:center;gap:12px">
+        <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#8b2350"/></svg>
+        <div><strong>FC BARCELONA</strong><div style="color:var(--muted)">© Official fan site</div></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile toggle
+    const toggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.style.display === 'block';
+      mobileNav.style.display = open ? 'none' : 'block';
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+  </script>
+</body>
+</html>
